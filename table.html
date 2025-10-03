@@ -13,155 +13,176 @@
     </p>
     <hr>
 
-    <details>
-        <summary><b>График</b></summary>
-        <p>
-            <label for="OX">
-                Значение по оси ОХ
-                <select id="OX">
-                    <option value="cuisine">Кухня</option>
-                    <option value="type">Тип блюда</option>
-                    <option value="difficulty">Сложность</option>
-                    <option value="region">Регион</option>
-                </select>
-            </label>
-        </p>
-        <p>
-            <label for="result">
-                Результат
-                <select id="result">
-                    <option value="count">Количество блюд</option>
-                    <option value="max_time">Максимальное время</option>
-                    <option value="min_time">Минимальное время</option>
-                    <option value="avg_popularity">Средняя популярность</option>
-                </select>
-            </label>
-        </p>
-                
-        <input type="button" value="Построить">
-        <p>Здесь будет график</p>
-    </details>
-                    
-    <details>
-        <summary><b>Фильтр</b></summary>
-        <p>
-            <label for="filter_name">
-                Название:
-                <input type="text" id="filter_name">
-            </label>
-        </p>
-        <p>
-            <label for="filter_type">
-                Тип:
-                <select id="filter_type">
-                    <option value="">Все</option>
-                    <option value="Основное">Основное</option>
-                    <option value="Суп">Суп</option>
-                    <option value="Закуска">Закуска</option>
-                    <option value="Десерт">Десерт</option>
-                    <option value="Выпечка">Выпечка</option>
-                    <option value="Напиток">Напиток</option>
-                </select>
-            </label>
-        </p>
-        <p>
-            <label for="filter_cuisine">
-                Кухня:
-                <select id="filter_cuisine">
-                    <option value="">Все</option>
-                    <option value="Русская">Русская</option>
-                    <option value="Татарская">Татарская</option>
-                    <option value="Грузинская">Грузинская</option>
-                    <option value="Украинская">Украинская</option>
-                    <option value="Узбекская">Узбекская</option>
-                    <option value="Башкирская">Башкирская</option>
-                    <option value="Сибирская">Сибирская</option>
-                    <option value="Бурятская">Бурятская</option>
-                </select>
-            </label>
-        </p>
-        <p>
-            <label for="filter_region">
-                Регион:
-                <input type="text" id="filter_region">
-            </label>
-        </p>
-        <p>
-            <label>
-                Время: 
-                от <input type="number" name="time_from" min="1" max="1440">
-            </label>
-            <label>
-                до <input type="number" name="time_to" min="1" max="1440"> мин
-            </label>
-        </p>
-        <p>
-            <label>
-                Популярность:
-                от <input type="number" name="pop_from" min="60" max="100"> 
-            </label>
-            <label>
-                до <input type="number" name="pop_to" min="60" max="100"> 
-            </label>
-        </p>
-            
-        <input type="button" value="Найти">
-    </details>
+    <form>
+        <details>
+            <summary><b>График</b></summary>
+            <p>
+                <label for="OX">
+                    Значение по оси ОХ
+                    <select id="OX">
+                        <option value="cuisine">Кухня</option>
+                        <option value="type">Тип блюда</option>
+                        <option value="difficulty">Сложность</option>
+                        <option value="region">Регион</option>
+                    </select>
+                </label>
+            </p>
 
-    <details>
-        <summary><b>Сортировка</b></summary>
-        <p>
-            <label for="sort1">
-                Первый уровень:
-                <select id="sort1">
-                    <option value="">Нет</option>
-                    <option value="name">Название</option>
-                    <option value="cuisine">Кухня</option>
-                    <option value="type">Тип</option>
-                    <option value="time">Время</option>
-                    <option value="popularity">Популярность</option>
-                </select>
-            </label>
-            <label>
-                <input type="checkbox" id="sort1_desc"> по убыванию?
-            </label>
-        </p>
-        <p>
-            <label for="sort2">
-                Второй уровень:
-                <select id="sort2">
-                    <option value="">Нет</option>
-                    <option value="name">Название</option>
-                    <option value="cuisine">Кухня</option>
-                    <option value="type">Тип</option>
-                    <option value="time">Время</option>
-                    <option value="popularity">Популярность</option>
-                </select>
-            </label>
-            <label>
-                <input type="checkbox" id="sort2_desc"> по убыванию?
-            </label>
-        </p>  
-        <p>
-            <label for="sort3">
-                Третий уровень:
-                <select id="sort3">
-                    <option value="">Нет</option>
-                    <option value="name">Название</option>
-                    <option value="cuisine">Кухня</option>
-                    <option value="type">Тип</option>
-                    <option value="time">Время</option>
-                    <option value="popularity">Популярность</option>
-                </select>
-            </label>
-            <label>
-                <input type="checkbox" id="sort3_desc"> по убыванию?
-            </label>
-        </p>
-            
-        <input type="button" value="Сортировать">
-    </details>
+            <p>
+                Результат
+                <p>
+                    <input type="checkbox" id="count">
+                    <label for="count">Количество блюд</label><br>
+                    
+                    <input type="checkbox" id="max_time">
+                    <label for="max_time">Максимальное время</label><br>
+                    
+                    <input type="checkbox" id="min_time">
+                    <label for="min_time">Минимальное время</label><br>
+                    
+                    <input type="checkbox" id="avg_popularity">
+                    <label for="avg_popularity">Средняя популярность</label>
+                </p>
+            </p>
+                    
+            <input type="button" value="Построить">
+            <p>Здесь будет график</p>
+        </details>
+    </form> 
+    
+    <form>
+        <details>
+            <summary><b>Фильтр</b></summary>
+            <p>
+                <label for="filter_name">
+                    Название:
+                    <input type="text" id="filter_name">
+                </label>
+            </p>
+            <p>
+                <label for="filter_cuisine">
+                    Кухня:
+                    <select id="filter_cuisine">
+                        <option value="">Все</option>
+                        <option value="Русская">Русская</option>
+                        <option value="Татарская">Татарская</option>
+                        <option value="Грузинская">Грузинская</option>
+                        <option value="Украинская">Украинская</option>
+                        <option value="Узбекская">Узбекская</option>
+                        <option value="Башкирская">Башкирская</option>
+                        <option value="Сибирская">Сибирская</option>
+                        <option value="Бурятская">Бурятская</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label for="filter_type">
+                    Тип:
+                    <input type="text" id="filter_type">
+                </label>
+            </p>
+            <p>
+                <label for="filter_region">
+                    Регион:
+                    <input type="text" id="filter_region">
+                </label>
+            </p>
+            <p>
+                <label>
+                    Время: 
+                    от <input type="number" name="time_from" min="1" max="1440">
+                </label>
+                <label>
+                    до <input type="number" name="time_to" min="1" max="1440"> мин
+                </label>
+            </p>
+            <p>
+                <label for="filter_dificalcy">
+                    Сложность:
+                    <input type="text" id="filter_dificalcy">
+                </label>
+            </p>
+            <p>
+                <label for="filter_ingredients">
+                    Основные ингредиенты:
+                    <input type="text" id="filter_ingredients">
+                </label>
+            </p>
+            <p>
+                <label>
+                    Популярность:
+                    от <input type="number" name="pop_from" min="60" max="100"> 
+                </label>
+                <label>
+                    до <input type="number" name="pop_to" min="60" max="100"> 
+                </label>
+            </p>
                 
+            <input type="button" value="Найти">
+        </details>
+    </form>
+
+    <form>
+        <details>
+            <summary><b>Сортировка</b></summary>
+            <p>
+                <label for="sort1">
+                    Первый уровень:
+                    <select id="sort1">
+                        <option value="">Нет</option>
+                        <option value="name">Название</option>
+                        <option value="cuisine">Кухня</option>
+                        <option value="type">Тип</option>
+                        <option value="region">Регион</option>
+                        <option value="time">Время</option>
+                        <option value="difficalcy">Сложность</option>
+                        <option value="popularity">Популярность</option>
+                    </select>
+                </label>
+                <label>
+                    <input type="checkbox" id="sort1_desc"> по убыванию?
+                </label>
+            </p>
+            <p>
+                <label for="sort2">
+                    Второй уровень:
+                    <select id="sort2">
+                        <option value="">Нет</option>
+                        <option value="name">Название</option>
+                        <option value="cuisine">Кухня</option>
+                        <option value="type">Тип</option>
+                        <option value="region">Регион</option>
+                        <option value="time">Время</option>
+                        <option value="difficalcy">Сложность</option>
+                        <option value="popularity">Популярность</option>
+                    </select>
+                </label>
+                <label>
+                    <input type="checkbox" id="sort2_desc"> по убыванию?
+                </label>
+            </p>  
+            <p>
+                <label for="sort3">
+                    Третий уровень:
+                    <select id="sort3">
+                        <option value="">Нет</option>
+                        <option value="name">Название</option>
+                        <option value="cuisine">Кухня</option>
+                        <option value="type">Тип</option>
+                        <option value="region">Регион</option>
+                        <option value="time">Время</option>
+                        <option value="difficalcy">Сложность</option>
+                        <option value="popularity">Популярность</option>
+                    </select>
+                </label>
+                <label>
+                    <input type="checkbox" id="sort3_desc"> по убыванию?
+                </label>
+            </p>
+                
+            <input type="button" value="Сортировать">
+        </details>
+    </form>        
 
     <br>
     <table border="1" width="95%" cellpadding="5" cellspacing="0" bgcolor="white">
