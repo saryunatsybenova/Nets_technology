@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL DISHES</title>
+</head>
+<body bgcolor="#fff8e1" text="#000000">
+    <h1 align="center">Все блюда народов России</h1>
+    <p align="center">
+        <a href="index.html">Главная</a> |
+        <a href="table.html">Все блюда</a>
+    </p>
+    <hr>
+
+    <details>
+        <summary><b>График</b></summary>
+        <p>
+            <label for="OX">
+                Значение по оси ОХ
+                <select id="OX">
+                    <option value="cuisine">Кухня</option>
+                    <option value="type">Тип блюда</option>
+                    <option value="difficulty">Сложность</option>
+                    <option value="region">Регион</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label for="result">
+                Результат
+                <select id="result">
+                    <option value="count">Количество блюд</option>
+                    <option value="max_time">Максимальное время</option>
+                    <option value="min_time">Минимальное время</option>
+                    <option value="avg_popularity">Средняя популярность</option>
+                </select>
+            </label>
+        </p>
+                
+        <input type="button" value="Построить">
+        <p>Здесь будет график</p>
+    </details>
+                    
+    <details>
+        <summary><b>Фильтр</b></summary>
+        <p>
+            <label for="filter_name">
+                Название:
+                <input type="text" id="filter_name">
+            </label>
+        </p>
+        <p>
+            <label for="filter_type">
+                Тип:
+                <select id="filter_type">
+                    <option value="">Все</option>
+                    <option value="Основное">Основное</option>
+                    <option value="Суп">Суп</option>
+                    <option value="Закуска">Закуска</option>
+                    <option value="Десерт">Десерт</option>
+                    <option value="Выпечка">Выпечка</option>
+                    <option value="Напиток">Напиток</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label for="filter_cuisine">
+                Кухня:
+                <select id="filter_cuisine">
+                    <option value="">Все</option>
+                    <option value="Русская">Русская</option>
+                    <option value="Татарская">Татарская</option>
+                    <option value="Грузинская">Грузинская</option>
+                    <option value="Украинская">Украинская</option>
+                    <option value="Узбекская">Узбекская</option>
+                    <option value="Башкирская">Башкирская</option>
+                    <option value="Сибирская">Сибирская</option>
+                    <option value="Бурятская">Бурятская</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label for="filter_region">
+                Регион:
+                <input type="text" id="filter_region">
+            </label>
+        </p>
+        <p>
+            <label>
+                Время: 
+                от <input type="number" name="time_from" min="1" max="1440">
+            </label>
+            <label>
+                до <input type="number" name="time_to" min="1" max="1440"> мин
+            </label>
+        </p>
+        <p>
+            <label>
+                Популярность:
+                от <input type="number" name="pop_from" min="60" max="100"> 
+            </label>
+            <label>
+                до <input type="number" name="pop_to" min="60" max="100"> 
+            </label>
+        </p>
+            
+        <input type="button" value="Найти">
+    </details>
+
+    <details>
+        <summary><b>Сортировка</b></summary>
+        <p>
+            <label for="sort1">
+                Первый уровень:
+                <select id="sort1">
+                    <option value="">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="cuisine">Кухня</option>
+                    <option value="type">Тип</option>
+                    <option value="time">Время</option>
+                    <option value="popularity">Популярность</option>
+                </select>
+            </label>
+            <label>
+                <input type="checkbox" id="sort1_desc"> по убыванию?
+            </label>
+        </p>
+        <p>
+            <label for="sort2">
+                Второй уровень:
+                <select id="sort2">
+                    <option value="">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="cuisine">Кухня</option>
+                    <option value="type">Тип</option>
+                    <option value="time">Время</option>
+                    <option value="popularity">Популярность</option>
+                </select>
+            </label>
+            <label>
+                <input type="checkbox" id="sort2_desc"> по убыванию?
+            </label>
+        </p>  
+        <p>
+            <label for="sort3">
+                Третий уровень:
+                <select id="sort3">
+                    <option value="">Нет</option>
+                    <option value="name">Название</option>
+                    <option value="cuisine">Кухня</option>
+                    <option value="type">Тип</option>
+                    <option value="time">Время</option>
+                    <option value="popularity">Популярность</option>
+                </select>
+            </label>
+            <label>
+                <input type="checkbox" id="sort3_desc"> по убыванию?
+            </label>
+        </p>
+            
+        <input type="button" value="Сортировать">
+    </details>
+                
+
+    <br>
+    <table border="1" width="95%" cellpadding="5" cellspacing="0" bgcolor="white">
+        <tr bgcolor="#8d6e63">
+            <th><font color="white">Название</font></th>
+            <th><font color="white">Кухня</font></th>
+            <th><font color="white">Тип</font></th>
+            <th><font color="white">Регион</font></th>
+            <th><font color="white">Время (мин)</font></th>
+            <th><font color="white">Сложность</font></th>
+            <th><font color="white">Основные ингредиенты</font></th>
+            <th><font color="white">Популярность</font></th>
+        </tr>
+        <tr><td>Пельмени</td><td>Русская</td><td>Основное</td><td>Урал, Сибирь</td><td>60</td><td>Средняя</td><td>Мука, мясо, лук</td><td>95</td></tr>
+        <tr><td>Борщ</td><td>Украинская</td><td>Суп</td><td>Юг России</td><td>90</td><td>Средняя</td><td>Свекла, капуста, мясо</td><td>90</td></tr>
+        <tr><td>Плов</td><td>Узбекская</td><td>Основное</td><td>Поволжье</td><td>120</td><td>Сложная</td><td>Рис, мясо, морковь</td><td>85</td></tr>
+        <tr><td>Хинкали</td><td>Грузинская</td><td>Основное</td><td>Кавказ</td><td>75</td><td>Сложная</td><td>Мука, мясо, специи</td><td>88</td></tr>
+        <tr><td>Щи</td><td>Русская</td><td>Суп</td><td>Центральная Россия</td><td>80</td><td>Простая</td><td>Капуста, мясо, картофель</td><td>82</td></tr>
+        <tr><td>Чак-чак</td><td>Татарская</td><td>Десерт</td><td>Татарстан</td><td>45</td><td>Простая</td><td>Мука, мед, яйца</td><td>78</td></tr>
+        <tr><td>Шашлык</td><td>Кавказская</td><td>Основное</td><td>Кавказ</td><td>180</td><td>Средняя</td><td>Мясо, лук, специи</td><td>92</td></tr>
+        <tr><td>Строганина</td><td>Сибирская</td><td>Закуска</td><td>Сибирь</td><td>30</td><td>Простая</td><td>Замороженная рыба</td><td>65</td></tr>
+        <tr><td>Блины</td><td>Русская</td><td>Основное</td><td>Вся Россия</td><td>40</td><td>Простая</td><td>Мука, молоко, яйца</td><td>94</td></tr>
+        <tr><td>Манты</td><td>Башкирская</td><td>Основное</td><td>Башкортостан</td><td>90</td><td>Средняя</td><td>Тесто, мясо, лук</td><td>80</td></tr>
+        <tr><td>Уха</td><td>Русская</td><td>Суп</td><td>Вся Россия</td><td>60</td><td>Простая</td><td>Рыба, картофель, лук</td><td>83</td></tr>
+        <tr><td>Голубцы</td><td>Русская</td><td>Основное</td><td>Центральная Россия</td><td>90</td><td>Средняя</td><td>Капуста, мясо, рис</td><td>79</td></tr>
+        <tr><td>Окрошка</td><td>Русская</td><td>Суп</td><td>Центральная Россия</td><td>30</td><td>Простая</td><td>Квас, овощи, мясо</td><td>76</td></tr>
+        <tr><td>Солянка</td><td>Русская</td><td>Суп</td><td>Вся Россия</td><td>70</td><td>Средняя</td><td>Мясо, соленые огурцы</td><td>81</td></tr>
+        <tr><td>Кулебяка</td><td>Русская</td><td>Выпечка</td><td>Центральная Россия</td><td>120</td><td>Сложная</td><td>Тесто, мясо, капуста</td><td>72</td></tr>
+        <tr><td>Расстегаи</td><td>Русская</td><td>Выпечка</td><td>Центральная Россия</td><td>60</td><td>Средняя</td><td>Тесто, рыба, лук</td><td>75</td></tr>
+        <tr><td>Курник</td><td>Русская</td><td>Выпечка</td><td>Центральная Россия</td><td>150</td><td>Сложная</td><td>Тесто, курица, грибы</td><td>68</td></tr>
+        <tr><td>Холодец</td><td>Русская</td><td>Закуска</td><td>Вся Россия</td><td>240</td><td>Средняя</td><td>Мясо, кости, специи</td><td>77</td></tr>
+        <tr><td>Селедка под шубой</td><td>Русская</td><td>Закуска</td><td>Вся Россия</td><td>50</td><td>Простая</td><td>Селедка, овощи, майонез</td><td>89</td></tr>
+        <tr><td>Оливье</td><td>Русская</td><td>Закуска</td><td>Вся Россия</td><td>40</td><td>Простая</td><td>Овощи, колбаса, майонез</td><td>93</td></tr>
+        <tr><td>Винегрет</td><td>Русская</td><td>Закуска</td><td>Вся Россия</td><td>35</td><td>Простая</td><td>Овощи, масло</td><td>74</td></tr>
+        <tr><td>Бефстроганов</td><td>Русская</td><td>Основное</td><td>Центральная Россия</td><td>45</td><td>Средняя</td><td>Говядина, сметана</td><td>84</td></tr>
+        <tr><td>Гурьевская каша</td><td>Русская</td><td>Десерт</td><td>Центральная Россия</td><td>60</td><td>Сложная</td><td>Манка, орехи, варенье</td><td>66</td></tr>
+        <tr><td>Пастила</td><td>Русская</td><td>Десерт</td><td>Центральная Россия</td><td>180</td><td>Средняя</td><td>Яблоки, мед</td><td>71</td></tr>
+        <tr><td>Пряники</td><td>Русская</td><td>Десерт</td><td>Вся Россия</td><td>90</td><td>Средняя</td><td>Мука, мед, специи</td><td>86</td></tr>
+        <tr><td>Эчпочмак</td><td>Татарская</td><td>Выпечка</td><td>Татарстан</td><td>75</td><td>Средняя</td><td>Тесто, мясо, картофель</td><td>73</td></tr>
+        <tr><td>Бэлиш</td><td>Татарская</td><td>Выпечка</td><td>Татарстан</td><td>120</td><td>Сложная</td><td>Тесто, мясо, крупа</td><td>67</td></tr>
+        <tr><td>Кыстыбый</td><td>Татарская</td><td>Выпечка</td><td>Татарстан</td><td>40</td><td>Простая</td><td>Тесто, картофель</td><td>69</td></tr>
+        <tr><td>Азу</td><td>Татарская</td><td>Основное</td><td>Татарстан</td><td>60</td><td>Средняя</td><td>Мясо, овощи, помидоры</td><td>80</td></tr>
+        <tr><td>Токмач</td><td>Татарская</td><td>Суп</td><td>Татарстан</td><td>50</td><td>Простая</td><td>Лапша, мясо, овощи</td><td>72</td></tr>
+        <tr><td>Шурпа</td><td>Татарская</td><td>Суп</td><td>Татарстан</td><td>90</td><td>Средняя</td><td>Мясо, овощи, специи</td><td>78</td></tr>
+        <tr><td>Чак-чак</td><td>Татарская</td><td>Десерт</td><td>Татарстан</td><td>45</td><td>Простая</td><td>Мука, мед, яйца</td><td>82</td></tr>
+        <tr><td>Хачапури</td><td>Грузинская</td><td>Выпечка</td><td>Кавказ</td><td>60</td><td>Средняя</td><td>Тесто, сыр, яйца</td><td>87</td></tr>
+        <tr><td>Сациви</td><td>Грузинская</td><td>Основное</td><td>Кавказ</td><td>120</td><td>Сложная</td><td>Курица, орехи, специи</td><td>79</td></tr>
+        <tr><td>Лобио</td><td>Грузинская</td><td>Основное</td><td>Кавказ</td><td>90</td><td>Средняя</td><td>Фасоль, орехи, специи</td><td>76</td></tr>
+        <tr><td>Харчо</td><td>Грузинская</td><td>Суп</td><td>Кавказ</td><td>80</td><td>Средняя</td><td>Мясо, рис, ткемали</td><td>83</td></tr>
+        <tr><td>Мцвади</td><td>Грузинская</td><td>Основное</td><td>Кавказ</td><td>60</td><td>Простая</td><td>Мясо, специи</td><td>85</td></tr>
+        <tr><td>Пхали</td><td>Грузинская</td><td>Закуска</td><td>Кавказ</td><td>45</td><td>Средняя</td><td>Овощи, орехи, специи</td><td>74</td></tr>
+        <tr><td>Буузы</td><td>Бурятская</td><td>Основное</td><td>Сибирь</td><td>90</td><td>Средняя</td><td>Тесто, мясо, лук</td><td>70</td></tr>
+        <tr><td>Шаньги</td><td>Сибирская</td><td>Выпечка</td><td>Сибирь</td><td>60</td><td>Простая</td><td>Тесто, картофель, сметана</td><td>68</td></tr>
+        <tr><td>Посикунчики</td><td>Сибирская</td><td>Выпечка</td><td>Сибирь</td><td>45</td><td>Простая</td><td>Тесто, мясо, лук</td><td>65</td></tr>
+        <tr><td>Морошка</td><td>Сибирская</td><td>Десерт</td><td>Сибирь</td><td>20</td><td>Простая</td><td>Ягоды, сахар</td><td>62</td></tr>
+        <tr><td>Кедровые орехи</td><td>Сибирская</td><td>Закуска</td><td>Сибирь</td><td>10</td><td>Простая</td><td>Кедровые орехи</td><td>75</td></tr>
+        <tr><td>Медовуха</td><td>Русская</td><td>Напиток</td><td>Вся Россия</td><td>1440</td><td>Сложная</td><td>Мед, вода, дрожжи</td><td>88</td></tr>
+        <tr><td>Квас</td><td>Русская</td><td>Напиток</td><td>Вся Россия</td><td>480</td><td>Средняя</td><td>Хлеб, вода, сахар</td><td>91</td></tr>
+        <tr><td>Сбитень</td><td>Русская</td><td>Напиток</td><td>Вся Россия</td><td>30</td><td>Простая</td><td>Мед, вода, специи</td><td>69</td></tr>
+        <tr><td>Варенье</td><td>Русская</td><td>Десерт</td><td>Вся Россия</td><td>120</td><td>Простая</td><td>Ягоды, сахар</td><td>90</td></tr>
+        <tr><td>Моченые яблоки</td><td>Русская</td><td>Закуска</td><td>Центральная Россия</td><td>4320</td><td>Простая</td><td>Яблоки, вода, специи</td><td>73</td></tr>
+        <tr><td>Бухлёр</td><td>Бурятская</td><td>Суп</td><td>Сибирь</td><td>120</td><td>Средняя</td><td>Картошка, мясо, лук</td><td>65</td></tr>
+        <tr><td>Хушууры</td><td>Бурятская</td><td>Основное</td><td>Сибирь</td><td>60</td><td>Средняя</td><td>Тесто, мясо, масло</td><td>67</td></tr>
+    </table>
+
+    <hr width="80%">
+    <p align="center">Группа: Б9123-09.03.04 (6 пг) | Цыбенова С.Э.</p>
+</body>
+</html>
