@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="CSS/index_bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- MDBootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet"/>
+    <title>CUISINE</title>
+</head>
+<body>    
+    <header>
+    <!-- Панель навигации -->
+        <nav class="navbar navbar-expand-md bg-light navbar-light" >
+            <!-- Заголовок -->
+            <a class="navbar-brand" href="#">Блюда народов России</a>
+            
+            <!-- Кнопка для свернутого меню -->
+            <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- меню -->
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index_bootstrap.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="table.html">Список блюд</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Контакты</a>
+                    </li>
+                </ul>
+
+                <!-- форма для поиска -->
+                <form class="d-flex ms-auto">
+                    <input class="form-control" type="text" placeholder="Найти">
+                    <button class="btn btn-outline-success" type="submit">Найти</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container .bg-light">
+        <!-- Галерея -->
+        <div class="container py-4">
+            <div class="row g-2">
+                <!-- Левый столбец -->
+                <div class="col-12 col-md-6 col-lg-3 order-lg-1 order-md-2">
+                    <div class="row g-2">
+                        <div class="col-sm-12 col-6 col-md-12">
+                            <div class="hover-zoom hover-shadow">
+                                <img src="images/borshc.jpeg" alt="борщ" class="img-fluid object-fit-cover rounded">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-6 col-md-12">
+                            <div class="hover-zoom hover-shadow">
+                                <img src="images/plov.jpg" alt="плов" class="img-fluid object-fit-cover rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Центральный столбец -->
+                <div class="col-12 col-md-12 col-lg-6 order-lg-2 order-md-1 mb-md-3">
+                    <div class="bg-image hover-overlay hover-zoom">
+                        <img src="images/pelmenii.jpg" alt="пельмени" class="img-fluid object-fit-cover rounded">
+                        <a href="pelmeni.html">
+                            <div class="mask" style="background-color: hsla(60, 83%, 55%, 0.3)"></div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Правый столбец -->
+                <div class="col-12 col-md-6 col-lg-3 order-lg-3 order-md-2">
+                    <div class="row g-2">
+                        <div class="col-sm-12 col-6 col-md-12">
+                            <div class="hover-zoom hover-shadow">
+                                <img src="images/shashlik.jpg" alt="шашлык" class="img-fluid object-fit-cover rounded">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-6 col-md-12">
+                            <div class="hover-zoom hover-shadow">
+                                <img src="images/buuz.webp" alt="буузы" class="img-fluid object-fit-cover rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция с круглыми изображениями -->
+        <div class="container py-4">
+            <div class="row g-4 text-center">
+                <!-- Первое круглое изображение -->
+                <div class="col-md-4 text-center">
+                    <div class="rounded-circle overflow-hidden border border-warning mx-auto" 
+                        style="width: 80px; height: 80px;">
+                        <img src="images/chak-chak.webp" alt="чак-чак" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <h6 class="text-primary-emphasis fw-bold mt-2 mb-1">Чак-чак</h6>
+                    <p class="small text-muted">
+                        Вкусный и легкий десерт татар, возьмите только...
+                    </p>
+                </div>
+                
+                <!-- Второе круглое изображение -->
+                <div class="col-md-4 text-center">
+                    <div class="rounded-circle overflow-hidden border border-warning mx-auto" 
+                        style="width: 80px; height: 80px;">
+                        <img src="images/golubtsi.webp" alt="голубцы" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <h6 class="text-primary-emphasis fw-bold mt-2 mb-1">Голубцы</h6>
+                    <p class="small text-muted">
+                        Голубцы готовят из голубей? Секрет раскрыт...
+                    </p>
+                </div>
+                
+                <!-- Третье круглое изображение -->
+                <div class="col-md-4 text-center">
+                    <div class="rounded-circle overflow-hidden border border-warning mx-auto" 
+                        style="width: 80px; height: 80px;">
+                        <img src="images/nuts.webp" alt="орехи" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <h6 class="text-primary-emphasis fw-bold mt-2 mb-1">Кедровые орехи</h6>
+                    <p class="small text-muted">
+                        Вред и польза самого знаменитого сибирского лакомства...
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Секция с тремя блоками 1 СТРОКА -->
+       <div class="container py-3">
+            <div class="row g-4 align-items-stretch"> <!-- растягиваем на всю высоту контейнера -->
+                <!-- Левый блок -->
+                <div class="col-lg-4 d-flex"> 
+                    
+                        <div class="flex-grow-1 me-3 d-flex flex-column"> <!--может расти, отступ справа, потомки вертикально-->
+                            <div class="text-primary-emphasis fw-bold mb-1">Буузы</div>
+                            <div class="block-text flex-grow-1"> <!--может расти -->
+                                Регион: Забайкалье<br>
+                                Буузы (также известные как позы) — это традиционное бурятское и монгольское блюдо, представляющее 
+                                собой большие пельмени особой формы с сочной мясной начинкой и бульоном внутри. Буузы являются кулинарным 
+                                символом Бурятии и популярны во всей Восточной Сибири.
+                            </div>
+                            <div class="text-end mt-auto"> <!-- mt-auto для прижатия к низу -->
+                                <a href="#" class="btn btn-primary">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"> <!--не может сжиматься--> 
+                            <div class="rounded overflow-hidden" style="width: 100px; height: 100%;">
+                                <img src="images/buuz.webp" alt="буузы" class="img-fluid h-100 object-fit-cover"> <!--масштабируемость вместе с родительским элементом-->
+                            </div>
+                        </div>
+                   
+                </div>
+                
+                <!-- Центральный блок -->
+                <div class="col-lg-4 d-flex">
+                    
+                        <div class="flex-shrink-0 me-3"> <!--не может сжиматься, отступ справа -->
+                            <div class="rounded overflow-hidden" style="width: 100px; height: 100%;">
+                                <img src="images/plov.jpg" alt="плов" class="img-fluid h-100 object-fit-cover">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 d-flex flex-column">
+                            <div class="text-primary-emphasis fw-bold mb-1">Плов</div>
+                            <div class="block-text flex-grow-1">
+                                Регион:Поволжье, Кавказ<br>
+                                Плов - восточное блюдо на русском столе. Плов — это сытное и ароматное блюдо из риса с мясом, овощами и специями, 
+                                которое заняло прочное место в кухнях многих народов России, особенно в поволжском регионе и на Кавказе. 
+                            </div>
+                            <div class="text-start mt-auto">
+                                <a href="#" class="btn btn-primary">Подробнее</a>
+                            </div>
+                        </div>
+                    
+                </div>
+                
+                <!-- Правый блок -->
+                <div class="col-lg-4 d-flex">
+                    <div class="d-flex flex-column">
+                        <div class="text-primary-emphasis fw-bold mb-1">Морошка</div>
+                        <div class="block-text flex-grow-1">
+                            Морошка — это традиционный русский десерт из одноименной северной ягоды, 
+                            которая обладает уникальным кисло-сладким вкусом с медовыми нотками. 
+                            Чаще всего морошку подают в виде варенья, желе или мусса, сохраняя ее 
+                            природный аромат и полезные свойства. Этот нежный десерт особенно ценится 
+                            за яркий янтарный цвет и тонкое сочетание с творогом, блинами или мороженым.
+                        </div>
+                        <div class="text-end mt-auto">
+                            <a href="#" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция с тремя блоками 2 СТРОКА -->
+        <div class="container py-3">
+            <div class="row g-4">
+                <!-- Центральный блок -->
+                <div class="col-lg-4 d-flex">
+                    
+                        <div class="flex-shrink-0 me-3">
+                            <div class="rounded overflow-hidden" style="width: 100px; height: 100%;">
+                                <img src="images/borshc.jpeg" alt="борщ" class="img-fluid h-100 object-fit-cover">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 d-flex flex-column">
+                            <div class="text-primary-emphasis fw-bold mb-1">Борщ</div>
+                            <div class="block-text flex-grow-1">
+                                Борщ — это знаменитый суп свекольного цвета, который 
+                                считается одним из символов восточнославянской кухни. Его 
+                                готовят на мясном бульоне с добавлением свёклы, капусты, 
+                                картофеля и других овощей, что придает ему насыщенный вкус 
+                                и аромат. Подают борщ обычно со сметаной и свежим ржаным хлебом. 
+                            </div>
+                            <div class="text-start mt-auto">
+                                <a href="#" class="btn btn-primary">Подробнее</a>
+                            </div>
+                        </div>
+                  
+                </div>
+
+                <!-- Правый блок -->
+                <div class="col-lg-4 d-flex">
+                    <div class="d-flex flex-column">
+                        <div class="text-primary-emphasis fw-bold mt-2 mb-1">Харчо</div>
+                        <div class="block-text flex-grow-1">
+                            Харчо — это традиционный грузинский суп с характерным острым 
+                            и кислым вкусом, который готовится на основе говядины и риса. 
+                            Его уникальность заключается в использовании специальной смеси 
+                            грузинских специй и ореховой заправки, а также добавления ткемали 
+                            (сливы) или томатной пасты. Этот насыщенный ароматный суп обычно 
+                            обильно приправляют чесноком и свежей зеленью, что придает ему 
+                            неповторимый пикантный вкус.
+                        </div>
+                        <div class="text-end mt-auto">
+                            <a href="#" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Центральный блок -->
+                <div class="col-lg-4 d-flex">
+                    
+                        <div class="flex-shrink-0 me-3">
+                            <div class="rounded overflow-hidden" style="width: 100px; height: 100%;">
+                                <img src="images/stroganina.jpg" alt="строганина" class="img-fluid h-100 object-fit-cover">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 d-flex flex-column">
+                            <div class="text-primary-emphasis fw-bold mb-1">Строганина</div>
+                            <div class="block-text flex-grow-1">
+                                Регион:Сибирь, Север<br>
+                                Строганина — это традиционное блюдо северных народов России, 
+                                представляющее собой тонко наструганные ломтики свежезамороженной 
+                                рыбы или мяса. Чаще всего для её приготовления используют сига, 
+                                нельму, омуля или муксуна, которые подают в замороженном виде. 
+                            </div>
+                            <div class="text-start mt-auto">
+                                <a href="#" class="btn btn-primary">Подробнее</a>
+                            </div>
+                        </div>
+                
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция с тремя блоками 3 СТРОКА -->
+        <div class="container py-3">
+            <div class="row g-4">
+                <!-- Правый блок -->
+                <div class="col-lg-4 d-flex">
+                    <div class="d-flex flex-column">
+                        <div class="text-primary-emphasis fw-bold mt-2 mb-1">Квас</div>
+                        <div class="block-text flex-grow-1">
+                            Квас — это традиционный русский кисло-сладкий напиток, 
+                            который готовят путем брожения из ржаного хлеба, муки или сухарей. 
+                            Он обладает освежающим вкусом с легкой газировкой и часто содержит 
+                            такие добавки, как изюм, мята или фрукты. В жаркую погоду квас прекрасно 
+                            утоляет жажду и считается полезным напитком благодаря содержанию витаминов 
+                            и молочной кислоты.
+                        </div>
+                        <div class="text-end mt-auto">
+                            <a href="#" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правый блок -->
+                <div class="col-lg-4 d-flex">
+                    <div class="d-flex flex-column">
+                        <div class="text-primary-emphasis fw-bold mt-2 mb-1">Оливье</div>
+                        <div class="block-text flex-grow-1">
+                            Оливье — это знаменитый русский салат, ставший неизменным атрибутом 
+                            новогоднего стола и других праздничных застолий. Его готовят из 
+                            отварного картофеля, моркови, колбасы или мяса, маринованных огурцов, 
+                            яиц и зелёного горошка, заправляя майонезом. Нежный вкус и сытность 
+                            этого салата сделали его одним из самых любимых и узнаваемых блюд 
+                            русской кухни во всём мире.
+                        </div>
+                        <div class="text-end mt-auto">
+                            <a href="#" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Левый блок -->
+                <div class="col-lg-4 d-flex"> 
+                    
+                        <div class="flex-grow-1 me-3 d-flex flex-column">
+                            <div class="text-primary-emphasis fw-bold mb-1">Хинкали</div>
+                            <div class="block-text flex-grow-1"> 
+                                Регион: Кавказ<br>
+                                Хинкали — это традиционное блюдо кавказской кухни, представляющее собой крупные dumplings с мясной начинкой и ароматным 
+                                бульоном внутри. За последние десятилетия хинкали прочно вошли в российскую кулинарную культуру и полюбились миллионам 
+                                людей.
+                            </div>
+                            <div class="text-end mt-auto">
+                                <a href="#" class="btn btn-primary">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <div class="rounded overflow-hidden" style="width: 100px; height: 100%;">
+                                <img src="images/hinkal.webp" alt="хинкали" class="img-fluid h-100 object-fit-cover">
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Футер -->
+        <div class="container">
+            <div class="text-center py-4 border-top border-secondary">
+                <p class="small text-muted">
+                    Группа: Б9123-09.03.04 (6 пг)   |   2025 г. |   Цыбенова С.Э.
+                </p>
+            </div>
+        </div>
+    </div>
+ 
+<!-- MDBootstrap JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+</body>
+</html>
