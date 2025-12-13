@@ -141,50 +141,56 @@
         
         <!-- Секция с тремя блоками 1 СТРОКА -->
        <div class="container py-3">
-            <div class="row g-4 align-items-stretch"> <!-- растягиваем на всю высоту контейнера -->
+            <div class="row g-4"> <!-- растягиваем на всю высоту контейнера -->
                 <!-- Левый блок -->
-                <div class="col-lg-4 d-flex"> 
-                    
-                        <div class="flex-grow-1 me-3 d-flex flex-column"> <!--может расти, отступ справа, потомки вертикально-->
-                            <div class="text-primary-emphasis fw-bold mb-1">Буузы</div>
-                            <div class="block-text flex-grow-1"> <!--может расти -->
-                                Регион: Забайкалье<br>
-                                Буузы (также известные как позы) — это традиционное бурятское и монгольское блюдо, представляющее 
-                                собой большие пельмени особой формы с сочной мясной начинкой и бульоном внутри. Буузы являются кулинарным 
-                                символом Бурятии и популярны во всей Восточной Сибири.
-                            </div>
-                            <div class="text-end mt-auto"> <!-- mt-auto для прижатия к низу -->
-                                <a href="#" class="btn btn-primary">Подробнее</a>
+                <div class="col-lg-4 d-flex">
+                    <div class="row">
+                        <div class="col-md-9 order-md-1 order-sm-2">
+                            <div class=" d-flex flex-column"> <!--может расти, отступ справа, потомки вертикально-->
+                                <div class="text-primary-emphasis fw-bold mb-1">Буузы</div>
+                                <div class="block-text"> <!--может расти -->
+                                    Регион: Забайкалье<br>
+                                    Буузы (также известные как позы) — это традиционное бурятское и монгольское блюдо, представляющее 
+                                    собой большие пельмени особой формы с сочной мясной начинкой и бульоном внутри. Буузы являются кулинарным 
+                                    символом Бурятии и популярны во всей Восточной Сибири.
+                                </div>
+                                <div class="text-end mt-auto"> <!-- mt-auto для прижатия к низу -->
+                                    <a href="#" class="btn btn-primary">Подробнее</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex-shrink-0"> <!--не может сжиматься--> 
+                        
+                        <div class="col-md-3 order-md-2 order-sm-1 ps-0"> <!--не может сжиматься--> 
                             <div class="rounded overflow-hidden" style="width: 100px; height: 100%;">
-                                <img src="images/buuz.webp" alt="буузы" class="img-fluid h-100 object-fit-cover"> <!--масштабируемость вместе с родительским элементом-->
+                                <img src="images/buuz.webp" alt="буузы" class="img-fluid h-100 object-fit-cover d-block"> <!--масштабируемость вместе с родительским элементом-->
                             </div>
                         </div>
-                   
+                       
+                    </div>   
                 </div>
                 
                 <!-- Центральный блок -->
                 <div class="col-lg-4 d-flex">
-                    
-                        <div class="flex-shrink-0 me-3"> <!--не может сжиматься, отступ справа -->
+                    <div class="row">
+                        <div class="col-md-3"> <!--не может сжиматься, отступ справа -->
                             <div class="rounded overflow-hidden" style="width: 100px; height: 100%;">
-                                <img src="images/plov.jpg" alt="плов" class="img-fluid h-100 object-fit-cover">
+                                <img src="images/plov.jpg" alt="плов" class="img-fluid h-100 object-fit-cover d-block">
                             </div>
                         </div>
-                        <div class="flex-grow-1 d-flex flex-column">
-                            <div class="text-primary-emphasis fw-bold mb-1">Плов</div>
-                            <div class="block-text flex-grow-1">
-                                Регион:Поволжье, Кавказ<br>
-                                Плов - восточное блюдо на русском столе. Плов — это сытное и ароматное блюдо из риса с мясом, овощами и специями, 
-                                которое заняло прочное место в кухнях многих народов России, особенно в поволжском регионе и на Кавказе. 
-                            </div>
-                            <div class="text-start mt-auto">
-                                <a href="#" class="btn btn-primary">Подробнее</a>
+                        <div class="col-md-9 ps-4">
+                            <div class="d-flex flex-column">
+                                <div class="text-primary-emphasis fw-bold mb-1">Плов</div>
+                                <div class="block-text">
+                                    Регион:Поволжье, Кавказ<br>
+                                    Плов - восточное блюдо на русском столе. Плов — это сытное и ароматное блюдо из риса с мясом, овощами и специями, 
+                                    которое заняло прочное место в кухнях многих народов России, особенно в поволжском регионе и на Кавказе. 
+                                </div>
+                                <div class="text-start mt-auto">
+                                    <a href="#" class="btn btn-primary">Подробнее</a>
+                                </div>
                             </div>
                         </div>
-                    
+                    </div>
                 </div>
                 
                 <!-- Правый блок -->
@@ -211,26 +217,28 @@
             <div class="row g-4">
                 <!-- Центральный блок -->
                 <div class="col-lg-4 d-flex">
-                    
-                        <div class="flex-shrink-0 me-3">
+                    <div class="row">
+                        <div class="col-md-3">
                             <div class="rounded overflow-hidden" style="width: 100px; height: 100%;">
                                 <img src="images/borshc.jpeg" alt="борщ" class="img-fluid h-100 object-fit-cover">
                             </div>
                         </div>
-                        <div class="flex-grow-1 d-flex flex-column">
-                            <div class="text-primary-emphasis fw-bold mb-1">Борщ</div>
-                            <div class="block-text flex-grow-1">
-                                Борщ — это знаменитый суп свекольного цвета, который 
-                                считается одним из символов восточнославянской кухни. Его 
-                                готовят на мясном бульоне с добавлением свёклы, капусты, 
-                                картофеля и других овощей, что придает ему насыщенный вкус 
-                                и аромат. Подают борщ обычно со сметаной и свежим ржаным хлебом. 
-                            </div>
-                            <div class="text-start mt-auto">
-                                <a href="#" class="btn btn-primary">Подробнее</a>
+                        <div class="col-md-9 ps-4">
+                            <div class="d-flex flex-column">
+                                <div class="text-primary-emphasis fw-bold mb-1">Борщ</div>
+                                <div class="block-text">
+                                    Борщ — это знаменитый суп свекольного цвета, который 
+                                    считается одним из символов восточнославянской кухни. Его 
+                                    готовят на мясном бульоне с добавлением свёклы, капусты, 
+                                    картофеля и других овощей, что придает ему насыщенный вкус 
+                                    и аромат. Подают борщ обычно со сметаной и свежим ржаным хлебом. 
+                                </div>
+                                <div class="text-start mt-auto">
+                                    <a href="#" class="btn btn-primary">Подробнее</a>
+                                </div>
                             </div>
                         </div>
-                  
+                    </div>                  
                 </div>
 
                 <!-- Правый блок -->
@@ -251,29 +259,31 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Центральный блок -->
                 <div class="col-lg-4 d-flex">
-                    
-                        <div class="flex-shrink-0 me-3">
+                    <div class="row">
+                        <div class="col-md-3">
                             <div class="rounded overflow-hidden" style="width: 100px; height: 100%;">
                                 <img src="images/stroganina.jpg" alt="строганина" class="img-fluid h-100 object-fit-cover">
                             </div>
                         </div>
-                        <div class="flex-grow-1 d-flex flex-column">
-                            <div class="text-primary-emphasis fw-bold mb-1">Строганина</div>
-                            <div class="block-text flex-grow-1">
-                                Регион:Сибирь, Север<br>
-                                Строганина — это традиционное блюдо северных народов России, 
-                                представляющее собой тонко наструганные ломтики свежезамороженной 
-                                рыбы или мяса. Чаще всего для её приготовления используют сига, 
-                                нельму, омуля или муксуна, которые подают в замороженном виде. 
-                            </div>
-                            <div class="text-start mt-auto">
-                                <a href="#" class="btn btn-primary">Подробнее</a>
+                        <div class="col-md-9 ps-4">
+                            <div class="d-flex flex-column">
+                                <div class="text-primary-emphasis fw-bold mb-1">Строганина</div>
+                                <div class="block-text">
+                                    Регион:Сибирь, Север<br>
+                                    Строганина — это традиционное блюдо северных народов России, 
+                                    представляющее собой тонко наструганные ломтики свежезамороженной 
+                                    рыбы или мяса. Чаще всего для её приготовления используют сига, 
+                                    нельму, омуля или муксуна, которые подают в замороженном виде. 
+                                </div>
+                                <div class="text-start mt-auto">
+                                    <a href="#" class="btn btn-primary">Подробнее</a>
+                                </div>
                             </div>
                         </div>
-                
+                    </div>                
                 </div>
             </div>
         </div>
@@ -319,25 +329,28 @@
 
                 <!-- Левый блок -->
                 <div class="col-lg-4 d-flex"> 
-                    
-                        <div class="flex-grow-1 me-3 d-flex flex-column">
-                            <div class="text-primary-emphasis fw-bold mb-1">Хинкали</div>
-                            <div class="block-text flex-grow-1"> 
-                                Регион: Кавказ<br>
-                                Хинкали — это традиционное блюдо кавказской кухни, представляющее собой крупные dumplings с мясной начинкой и ароматным 
-                                бульоном внутри. За последние десятилетия хинкали прочно вошли в российскую кулинарную культуру и полюбились миллионам 
-                                людей.
-                            </div>
-                            <div class="text-end mt-auto">
-                                <a href="#" class="btn btn-primary">Подробнее</a>
+                    <div class="row">
+                        <div class="col-md-9 order-md-1 order-sm-2">
+                            <div class="d-flex flex-column">
+                                <div class="text-primary-emphasis fw-bold mb-1">Хинкали</div>
+                                <div class="block-text"> 
+                                    Регион: Кавказ<br>
+                                    Хинкали — это традиционное блюдо кавказской кухни, представляющее собой крупные dumplings с мясной начинкой и ароматным 
+                                    бульоном внутри. За последние десятилетия хинкали прочно вошли в российскую кулинарную культуру и полюбились миллионам 
+                                    людей.
+                                </div>
+                                <div class="text-end mt-auto">
+                                    <a href="#" class="btn btn-primary">Подробнее</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex-shrink-0">
+                        
+                        <div class="col-md-3 order-md-2 order-sm-1 pe-3">
                             <div class="rounded overflow-hidden" style="width: 100px; height: 100%;">
                                 <img src="images/hinkal.webp" alt="хинкали" class="img-fluid h-100 object-fit-cover">
                             </div>
                         </div>
-                    
+                    </div>
                 </div>
             </div>
         </div>
