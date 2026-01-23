@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор равнобедренного треугольника</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="calculator">
+    <form name="calculatorForm" id="calculatorForm">
+        <h1 class="calculator__title">Калькулятор равнобедренного треугольника</h1>
+
+        <div class="calculator__section">
+            <label class="calculator__label">Входные данные:</label>
+
+            <div class="radio-group">
+                <label class="radio-item">
+                    <input class="radio-item__input" type="radio" name="inputType" value="side-angle" checked>
+                    <span class="radio-item__text">Боковая сторона и угол при основании</span>
+                </label>
+                <label class="radio-item">
+                    <input class="radio-item__input" type="radio" name="inputType" value="base-angle">
+                    <span class="radio-item__text">Основание и угол при вершине</span>
+                </label>
+            </div>
+            
+            <button class="button button--show" type="button" id="showBtn">Показать</button>
+        </div>
+
+        <div class="triangle-image" id="imageSideAngle">
+            <img class="triangle-image__image" src="side_angle.png" alt="Боковая сторона и угол при основании">
+        </div>
+        <div class="triangle-image triangle-image--hidden" id="imageBaseAngle">
+            <img class="triangle-image__image" src="base_angle.png" alt="Основание и угол при вершине">
+        </div>
+
+        <div class="error-box" id="generalError"></div>
+
+        <div class="calculator__section" id="inputsSideAngle">
+            <label class="calculator__label">Введите данные:</label>
+            <div class="input-group">
+                <div class="input-field">
+                    <label class="input-field__label" for="lateralSide">Боковая сторона (AB = AC): </label>
+                    <input class="input-field__input" type="number" id="lateralSide" name="lateralSide" step="any" min="0"
+                           placeholder="Введите значение">
+                    <span class="input-field__error" id="lateralSideError"></span>
+                </div>
+                <div class="input-field">
+                    <label class="input-field__label" for="baseAngle">Угол при основании (∠ABC = ∠ACB): </label>
+                    <input class="input-field__input" type="number" id="baseAngle" name="baseAngle" step="any" min="0" max="90"
+                           placeholder="Введите значение (0°-90°)">
+                    <span class="input-field__error" id="baseAngleError"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="calculator__section calculator__section--hidden" id="inputsBaseAngle">
+            <label class="calculator__label">Введите данные:</label>
+            <div class="input-group">
+                <div class="input-field">
+                    <label class="input-field__label" for="base">Основание (BC): </label>
+                    <input class="input-field__input" type="number" id="base" name="base" step="any" min="0"
+                           placeholder="Введите значение">
+                    <span class="input-field__error" id="baseError"></span>
+                </div>
+                <div class="input-field">
+                    <label class="input-field__label" for="vertexAngle">Угол при вершине (∠BAC): </label>
+                    <input class="input-field__input" type="number" id="vertexAngle" name="vertexAngle" step="any" min="0" max="180"
+                           placeholder="Введите значение (0°-180°)">
+                    <span class="input-field__error" id="vertexAngleError"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="calculator__section">
+            <label class="calculator__label">Выберите вычисляемые характеристики</label>
+            <div class="checkbox-group">
+                <label class="checkbox-item">
+                    <input class="checkbox-item__input" type="checkbox" id="calcPerimeter" name="calcPerimeter" checked>
+                    <span class="checkbox-item__text">Периметр</span>
+                </label>
+                <label class="checkbox-item">
+                    <input class="checkbox-item__input" type="checkbox" id="calcMedians" name="calcMedians" checked>
+                    <span class="checkbox-item__text">Медианы</span>
+                </label>
+                <label class="checkbox-item">
+                    <input class="checkbox-item__input" type="checkbox" id="calcMissingSides" name="calcMissingSides" checked>
+                    <span class="checkbox-item__text">Неизвестные стороны</span>
+                </label>
+            </div>
+            <div class="error-box" id="checkboxError"></div>
+        </div>
+
+        <div class="button-group">
+            <button class="button button--calculate" type="button" id="calculateBtn">Вычислить</button>
+            <button class="button button--clear" type="button" id="clearBtn">Очистить</button>
+        </div>
+
+        <div class="results" id="results">
+            <h3 class="results__title">Результаты вычислений:</h3>
+            <div id="resultsContent"></div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
