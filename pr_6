@@ -1,0 +1,104 @@
+function decryptVerticalTransposition(ciphertext, key) {
+  const n = key.length;
+  const len = ciphertext.length;
+  const rows = Math.ceil(len / n);
+
+  const columns = [];
+  for (let i = 0; i < n; i++) {
+    const start = i * rows;
+    const end = (i + 1) * rows;
+    columns[i] = ciphertext.slice(start, end);
+  }
+  //console.log(columns);
+
+  const keyWithIndex = [];
+  for (let i = 0; i < key.length; i++) {
+    keyWithIndex.push({ char: key[i], idx: i });
+  }
+
+  keyWithIndex.sort(function(a, b) {
+  if (a.char === b.char) return a.idx - b.idx;
+  if (a.char < b.char) return -1;
+  if (a.char > b.char) return 1;
+  return 0;
+});
+
+  const order = new Array(n);
+  for (let pos = 0; pos < n; pos++) {
+    order[keyWithIndex[pos].idx] = pos;
+  }
+
+  const grid = [];
+  for (let r = 0; r < rows; r++) {
+    grid[r] = [];
+    for (let c = 0; c < n; c++) {
+      grid[r][c] = '';
+    }
+  }
+
+  for (let col = 0; col < n; col++) {
+    const encryptedColIndex = order[col];
+    const colData = columns[encryptedColIndex];
+    for (let row = 0; row < rows; row++) {
+      if (row < colData.length) {
+        grid[row][col] = colData[row];
+      }
+    }
+  }
+
+  let plaintext = '';
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < n; col++) {
+      plaintext += grid[row][col];
+    }
+  }
+
+  return plaintext.replace(/_+$/, '');
+}
+
+function isValidDecryption(text) {
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] === ',') {
+      if (i + 1 >= text.length || text[i + 1] !== '_') {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+function runDecryption() {
+  const ciphertext = `лето_а,есиа_ына,_аеввосьод_тккяноил__ыт_кмты_яд_вжло,вж__т_тд_ьча_с_сне_`;
+
+  const keys = [
+    "лекция", "метеорит", "орбита", "история", "эксперимент",
+    "число", "звезда", "астрономия", "исследование"
+  ];
+
+  let bestResult = null;
+  const results = [];
+
+  for (let k = 0; k < keys.length; k++) {
+    const key = keys[k];
+    const decrypted = decryptVerticalTransposition(ciphertext, key);
+    const valid = isValidDecryption(decrypted);
+    results.push({ key: key, text: decrypted, valid: valid });
+    if (valid && bestResult === null) {
+      bestResult = { key: key, text: decrypted };
+    }
+  }
+
+  return { bestResult, allResults: results };
+}
+
+const { bestResult, allResults } = runDecryption();
+
+console.log(`Ключ: ${bestResult.key}`);
+console.log(`Текст: ${bestResult.text}`);
+console.log('');
+
+console.log('Все варианты:');
+for (let i = 0; i < allResults.length; i++) {
+  const r = allResults[i];
+  console.log(`${r.key}: ${r.text}`);
+}
