@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Практическая работа 2</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://d3js.org/d3.v7.min.js"> </script>
+    <script type="module" src="./javaScript/index.js"></script>
+</head>
+<body>  
+    <form id="setting">
+        <div id="coordCont">Скорость анимации
+            <p>
+                <label for="cx">x: </label>
+                <input type="number" id="cx" value="300" max="600" min="0">
+            </p>
+            <p>
+                <label for="cy">y: </label>
+                <input type="number" id="cy" value="300" max="600" min="0">
+            </p>
+        </div>
+        <div id="scaleCont">Масштаб
+            <p>
+                <label for="sx">по x: </label>
+                <input type="number" id="sx" value="1" max="2" min="0">
+            </p>
+            <p>
+                <label for="sy">по y: </label>
+                <input type="number" id="sy" value="1" max="2" min="0">
+            </p>
+        </div>
+        <div id="rotateCont">Поворот
+            <p>
+                <label for="corner">угол: </label>
+                <input type="number" id="corner" value="180" max="360" min="0">
+            </p>
+        </div>
+        <input type="button" id="setSettingsButton" value="Нарисовать">
+        <input type="button" id="animateButton" value="Анимировать">
+        <input type="button" id="resetSettingsButton" value="Очистить">
+        
+    </form>
+
+    <svg></svg>
+</body>
+</html>
