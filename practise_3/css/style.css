@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    display: flex;
+}
+
+#list {
+    width: 90%;
+    border: thin solid black;
+    text-align: center;
+    background: rgb(238, 236, 236);
+    border-collapse: collapse;
+}
+
+td, th {
+    border: thin solid rgb(213, 212, 212);
+}
+
+th { 
+    background: lightgrey;
+}
+
+#filter {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 20px;
+    gap: 5px;
+}
+
+#filter p {
+    display: flex;
+    justify-content: center;
+}
+
+#filter label {
+    white-space: nowrap;
+    margin-right: 5px;
+}
+
+#filter input {
+    flex: 1;
+    margin: 0 5px;
+}
+
+#sort {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 20px;
+    gap: 5px;
+}
+
+#sort p {
+    display: flex;
+    justify-content: space-between;
+}
+
+svg {
+    margin: 10px;
+    border: thin solid black;
+    width: 800px;
+    height: 400px;
+}
+
+svg path, line {
+    fill: none;
+    stroke: black;
+    width: 1px;
+}
+
+svg text {
+    font: 8px Verdana;
+}
+
+#setting {
+    margin: 10px;
+}
+
+#selectTypeChart {
+    margin-left: 10px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список блюд</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://d3js.org/d3.v7.min.js"> </script>
+    <script type="module" src="./JavaScript/index.js"></script>
+</head>
+<body>
+     <div>
+        <form id="filter">
+            <h3>Фильтр</h3>
+            <p>
+                <label for="dish">Название:</label>
+                <input type="text" id="dish">
+            </p>
+            <p>
+                <label for="cousine">Кухня:</label>
+                <input type="text" id="cousine">
+            </p>
+            <p>
+                <label for="type">Тип:</label>
+                <input type="text" id="type">
+            </p>
+            <p>
+                <label for="region">Регион:</label>
+                <input type="text" id="region">
+            </p>
+            <p>
+                <label for="thermConductFrom">Время приготовления: </label>
+                от <input type="number" id="thermConductFrom">
+                до <input type="number" id="yearTo">
+            </p>
+            <p>
+                <label for="complexity">Сложность:</label>
+                <input type="text" id="complexity">
+            </p>
+            <p>
+                <label for="ingredients">Основные ингредиенты:</label>
+                <input type="text" id="ingredients">
+            </p>
+            <p>
+                <label for="priceFrom">Популярность:</label>
+                от <input type="number" id="priceFrom">
+                до <input type="number" id="heightTo">
+            </p>
+            <input type="button" id='applyFiltersButton' value="Найти">
+            <input type="button" id='resetFiltersButton' value="Очистить фильтры">
+        </form>
+        <form id="sort">
+            <p> Сортировать по</p>
+            <p>
+                <select id="fieldsFirst">
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsFirstDesc">
+            </p>
+            <p>
+                <select id="fieldsSecond">
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsSecondDesc">
+            </p>
+            <p>
+                <select id="fieldsThird">
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsThirdDesc">
+            </p>
+            <input type="button" id="applySortButton" value="Сортировать">
+            <input type="button" id="resetSortButton" value="Сбросить сортировку">
+        </form>
+    </div>
+    <svg></svg>
+    <table id="list"></table>
+</body>
+</html>
